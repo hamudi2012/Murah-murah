@@ -3,132 +3,86 @@
 <head><meta name="google-site-verification" content="3eEt-BDrNTx1-ZYFwGEB-5hvz73i71dSlG8w93NjZeg" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mj-Shop Alam Gambar</title>
+<title>Mj-Shop ULTRA FINAL FIX</title>
+<meta name="description" content="Mj-Shop: Produk, Artikel & Testimoni Pelanggan. Order via WhatsApp.">
 <style>
-*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,sans-serif;}
-body{
-  background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
-  background-size: cover;
-  color:#fff;
-  overflow-x:hidden;
-  padding-bottom:160px; /* biar space buat bio-link bawah + footer */
-}
-header, footer{
-  position: fixed; left:0; right:0; width:100%;
-  background: rgba(200, 180, 150, 0.85);
-  padding: 10px; text-align:center;
-  box-shadow: 0 5px 15px rgba(0,0,0,.2);
-  z-index:999; color:#fff;
-}
-header h2{font-size:24px;cursor:pointer;margin-bottom:6px;}
-nav{display:flex;justify-content:center;gap:6px;flex-wrap:wrap;}
-nav a{
-  padding:5px 8px;border-radius:6px;text-decoration:none;color:#fff;font-weight:bold;font-size:13px;
-  white-space:nowrap;cursor:pointer;
-  background: rgba(58,166,85,0.8);
-  transition:0.3s;
-}
-nav a:hover{transform: scale(1.1);background: rgba(245,230,166,0.8);}
-footer{bottom:0;font-size:12px;}
-section{
-  display:none;
-  padding:160px 10px 60px; /* biar header nggak nutup clickable area */
-  max-width:1000px;
-  margin:0 auto;
-}
-section.active{display:block;}
-.slider{display:flex;overflow-x:auto;gap:10px;scroll-behavior:smooth;padding:10px 0;}
-.slider::-webkit-scrollbar{height:6px;}
-.slider::-webkit-scrollbar-thumb{background: rgba(58,166,85,0.8); border-radius:4px;}
-.card{
-  background: rgba(255,255,255,0.85);
-  color:#333;
-  padding:10px;
-  border-radius:12px;
-  cursor:pointer;
-  box-shadow: 0 4px 12px rgba(0,0,0,.12);
-  transition:0.4s;
-  min-width:180px; flex:0 0 auto;
-}
-.card:hover{transform: translateY(-5px) scale(1.03);box-shadow:0 10px 20px rgba(0,0,0,.18);}
-.card img{width:100%;height:150px;object-fit:cover;border-radius:6px;transition:0.3s;}
-.card img:hover{transform:scale(1.05);}
-.btn{
-  background: linear-gradient(135deg,#3aa655,#d1b280);
-  color:#fff;
-  padding:6px 10px;
-  border-radius:6px;
-  border:none;
-  cursor:pointer;
-  margin-top:6px;
-  font-size:13px;
-  transition:0.4s;
-}
-.btn-danger{background:red;}
-.btn:hover{transform: scale(1.05) rotate(-1deg);opacity:0.9;}
-input,textarea,select{width:100%;padding:6px;margin-top:6px;font-size:13px;}
-textarea{resize:none;}
-.cart-box{background: rgba(255,255,255,0.85); color:#333; padding:10px;border-radius:8px;margin:10px 0; box-shadow:0 3px 8px rgba(0,0,0,.15);}
-#popup{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);justify-content:center;align-items:center;z-index:1000;}
-#popup .box{background: rgba(255,255,255,0.95); padding:15px;border-radius:10px;max-width:400px;width:90%;max-height:80%;overflow:auto;position:relative;}
-#popup .close{position:absolute;top:6px;right:10px;font-size:18px;cursor:pointer;}
-.bio-link-bottom{
-  position: fixed;
-  bottom:40px; /* di atas footer */
-  left:50%;
-  transform: translateX(-50%);
-  background: rgba(0,0,0,0.6);
-  padding:10px 15px;
-  border-radius:12px;
-  display:flex;
-  gap:10px;
-  z-index:999;
-}
-.bio-link-bottom a{
-  display:flex;
-  align-items:center;
-  gap:4px;
-  color:#fff;
-  text-decoration:none;
-  font-size:13px;
-  transition:0.3s;
-}
-.bio-link-bottom a:hover{transform: scale(1.1);}
-.bio-link-bottom img{width:20px;height:20px;}
-section h3{color:#3aa655;margin-bottom:10px;}
-@media(max-width:768px){.card{min-width:140px}.card img{height:120px;} header h2{font-size:20px;}}
-@media(min-width:1024px){.card{min-width:200px}.card img{height:220px};}
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,sans-serif}
+body{background:#f5f5f5;color:#333;padding-bottom:180px;overflow-x:hidden;}
+header,footer{position:fixed;left:0;right:0;width:100%;background:rgba(58,166,85,.95);padding:10px;text-align:center;box-shadow:0 5px 15px rgba(0,0,0,.2);z-index:10000;color:#fff;}
+header h2{font-size:24px;cursor:pointer;margin-bottom:6px}
+header nav{display:flex;justify-content:center;gap:6px;flex-wrap:wrap;position:relative;z-index:10001;}
+nav a{padding:5px 8px;border-radius:6px;text-decoration:none;color:#fff;font-weight:bold;font-size:13px;white-space:nowrap;cursor:pointer;background:rgba(245,230,166,.8);transition:.3s}
+nav a:hover{transform:scale(1.1);background:rgba(58,166,85,.8)}
+footer{bottom:0;font-size:12px}
+section{display:none;padding:120px 10px 60px;max-width:900px;margin:0 auto;position:relative;z-index:1;min-height:calc(100vh - 120px);}
+section.active{display:block}
+.slider{display:flex;overflow-x:auto;gap:10px;scroll-behavior:smooth;padding:10px 0}
+.slider::-webkit-scrollbar{height:6px}
+.slider::-webkit-scrollbar-thumb{background:rgba(58,166,85,.8);border-radius:4px}
+.card{background:rgba(255,255,255,.85);color:#333;padding:10px;border-radius:12px;cursor:pointer;box-shadow:0 4px 12px rgba(0,0,0,.12);transition:.4s;margin-bottom:10px;display:flex;flex-direction:column;}
+.card:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 8px 16px rgba(0,0,0,.18)}
+.card img{width:100%;height:150px;object-fit:cover;border-radius:6px;transition:.3s;margin-bottom:6px}
+.card img:hover{transform:scale(1.05)}
+.btn{background:linear-gradient(135deg,#3aa655,#d1b280);color:#fff;padding:6px 10px;border-radius:6px;border:none;cursor:pointer;margin-top:6px;font-size:13px;transition:.4s}
+.btn-danger{background:red}
+.btn:hover{transform:scale(1.05) rotate(-1deg);opacity:.9}
+input,textarea,select{width:100%;padding:6px;margin-top:6px;font-size:13px}
+textarea{resize:none}
+.cart-box{background:rgba(255,255,255,.85);color:#333;padding:10px;border-radius:8px;margin:10px 0;box-shadow:0 3px 8px rgba(0,0,0,.15)}
+.bio-link-bottom{position:fixed;bottom:40px;left:50%;transform:translateX(-50%);display:flex;gap:10px;z-index:999}
+.bio-link-bottom a{display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,0.9);transition:.3s}
+.bio-link-bottom a img{width:24px;height:24px}
+.bio-link-bottom a:hover{transform:scale(1.2)}
+section h3{color:#3aa655;margin-bottom:10px}
+#homeProduk,#produkList{display:grid;grid-template-columns: repeat(auto-fill,minmax(45%,1fr));gap:10px}
+#artikelList .card p{-webkit-line-clamp:3;display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis}
+#homeArtikel .card,#homeTestimoni .card{min-width:200px;max-width:200px;max-height:250px;overflow:hidden}
+.detail-page{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:#fff;overflow:auto;padding:20px;z-index:10001;}
+.detail-page.active{display:block;}
+.detail-page .close-detail{position:absolute;top:10px;right:10px;font-size:22px;cursor:pointer;font-weight:bold;color:#333;}
+.detail-page img{max-width:100%;border-radius:6px;margin-bottom:10px;}
+@media(max-width:768px){.card img{height:120px}header h2{font-size:20px}#homeProduk,#produkList{grid-template-columns: repeat(2,1fr);}}
+@media(min-width:1024px){.card img{height:150px}}
+html{scroll-padding-top:120px;}
 </style>
 </head>
 <body>
 
 <header>
-<h2 onclick="showPage('home')">Mj-Shop</h2>
+<h2>Mj-Shop</h2>
 <nav>
-<a onclick="showPage('home')">Home</a>
-<a onclick="showPage('produk')">Produk</a>
-<a onclick="showPage('artikel')">Artikel</a>
-<a onclick="showPage('testimoni')">Testimoni</a>
-<a onclick="showPage('cart')">Keranjang</a>
-<a onclick="showPage('admin')">Admin</a>
+<a href="#" data-page="home">Home</a>
+<a href="#" data-page="produk">Produk</a>
+<a href="#" data-page="artikel">Artikel</a>
+<a href="#" data-page="testimoni">Testimoni</a>
+<a href="#" data-page="cart">Keranjang</a>
+<a href="#" data-page="admin">Admin</a>
 </nav>
 </header>
 
 <section id="home" class="active">
-<h3>Produk Terbaru</h3><div class="slider" id="homeProduk"></div>
-<h3>Artikel Terbaru</h3><div class="slider" id="homeArtikel"></div>
-<h3>Testimoni Pelanggan</h3><div class="slider" id="homeTestimoni"></div>
+<h3>Produk Terbaru</h3>
+<div id="homeProduk"></div>
+<h3>Artikel Terbaru</h3>
+<div class="slider" id="homeArtikel"></div>
+<h3>Testimoni Pelanggan</h3>
+<div class="slider" id="homeTestimoni"></div>
 </section>
 
 <section id="produk">
 <h3>Produk</h3>
-<label>Filter Kategori</label>
-<select id="filterKategori" onchange="filterProduk()">
+<label>Filter Kategori & Harga</label>
+<select id="filterKategori">
 <option value="all">Semua</option>
 <option value="fashion">Fashion</option>
 <option value="rumah">Rumah</option>
 <option value="gadget">Gadget</option>
 <option value="lain">Lain-lain</option>
+</select>
+<select id="filterHarga">
+<option value="all">Harga Semua</option>
+<option value="murah">Murah → Mahal</option>
+<option value="mahal">Mahal → Murah</option>
 </select>
 <div id="produkList"></div>
 </section>
@@ -139,6 +93,7 @@ section h3{color:#3aa655;margin-bottom:10px;}
 <section id="cart">
 <h3>Keranjang Belanja</h3>
 <div class="cart-box" id="cartList">Belum ada produk di keranjang</div>
+<p><b>Total: Rp <span id="totalHarga">0</span></b></p>
 <button class="btn btn-danger" onclick="checkout()">Checkout via WhatsApp</button>
 </section>
 
@@ -149,242 +104,146 @@ section h3{color:#3aa655;margin-bottom:10px;}
 <input id="adminPassword" type="password" placeholder="Password">
 <button class="btn" onclick="loginAdmin()">Login</button>
 </div>
-
 <div id="adminBox" style="display:none">
 <button class="btn btn-danger" style="margin-bottom:10px;" onclick="logoutAdmin()">Logout</button>
-
-<h4>Tambah Produk</h4>
+<h4>Produk (Tambah / Edit / Hapus)</h4>
 <input id="pnama" placeholder="Nama Produk">
+<input id="pharga" placeholder="Harga Produk">
+<input id="pstok" placeholder="Stok Produk">
 <select id="pkategori">
 <option value="fashion">Fashion</option>
 <option value="rumah">Rumah</option>
 <option value="gadget">Gadget</option>
 <option value="lain">Lain-lain</option>
 </select>
-<input type="number" id="pstok" placeholder="Stok" min="0">
-<input type="file" id="pfile" accept="image/jpeg,image/png,image/webp,image/gif,image/bmp,image/tiff">
+<input id="pgambar" placeholder="Link gambar">
 <button class="btn" onclick="tambahProduk()">Tambah Produk</button>
 
-<h4>Tambah Artikel</h4>
+<h4>Artikel (Tambah / Edit / Hapus)</h4>
 <input id="anama" placeholder="Judul Artikel">
 <textarea id="aisi" placeholder="Isi Artikel"></textarea>
-<input type="file" id="afile" accept="image/jpeg,image/png,image/webp,image/gif,image/bmp,image/tiff">
+<input id="agambar" placeholder="Link gambar artikel">
 <button class="btn" onclick="tambahArtikel()">Tambah Artikel</button>
 
-<h4>Tambah Testimoni</h4>
+<h4>Testimoni (Tambah / Edit / Hapus)</h4>
 <input id="tnama" placeholder="Nama Pelanggan">
 <textarea id="tisi" placeholder="Isi Testimoni"></textarea>
-<input type="file" id="tfile" accept="image/jpeg,image/png,image/webp,image/gif,image/bmp,image/tiff">
+<input id="tgambar" placeholder="Link gambar testimoni">
 <button class="btn" onclick="tambahTestimoni()">Tambah Testimoni</button>
 </div>
 </section>
 
-<!-- BIO-LINK ICON BAWAH -->
 <div class="bio-link-bottom">
-  <a href="https://wa.me/6285691451094" target="_blank">
-    <img src="https://img.icons8.com/ios-filled/24/ffffff/whatsapp.png"/> WhatsApp
-  </a>
-  <a href="https://instagram.com/mjshop" target="_blank">
-    <img src="https://img.icons8.com/ios-filled/24/ffffff/instagram-new.png"/> Instagram
-  </a>
-  <a href="https://t.me/mjshop" target="_blank">
-    <img src="https://img.icons8.com/ios-filled/24/ffffff/telegram-app.png"/> Telegram
-  </a>
-  <a href="https://tiktolk.com/@mj_shop91" target="_blank">
-    <img src="https://img.icons8.com/ios-filled/24/ffffff/tiktok.png"/> TikTok
-  </a>
-  <a href="https://www.facebook.com/profile.php?id=61585424703436" target="_blank">
-    <img src="https://img.icons8.com/ios-filled/24/ffffff/facebook-new.png"/> Facebook
-  </a>
+<a href="https://wa.me/6285691451094" target="_blank"><img src="https://img.icons8.com/color/48/000000/whatsapp.png"/></a>
+<a href="https://instagram.com/mjshop" target="_blank"><img src="https://img.icons8.com/color/48/000000/instagram-new.png"/></a>
+<a href="https://t.me/mjshop" target="_blank"><img src="https://img.icons8.com/color/48/000000/telegram-app.png"/></a>
+<a href="https://tiktolk.com/@mj_shop91" target="_blank"><img src="https://img.icons8.com/color/48/000000/tiktok--v1.png"/></a>
+<a href="https://www.facebook.com/profile.php?id=61585424703436" target="_blank"><img src="https://img.icons8.com/color/48/000000/facebook-new.png"/></a>
 </div>
 
 <footer>© Mj-Shop • Order via WhatsApp</footer>
 
-<div id="popup"><div class="box"><span class="close" onclick="popup.style.display='none'">✖</span><div id="popupContent"></div></div></div>
+<div class="detail-page" id="detailPage">
+<span class="close-detail">×</span>
+<div id="detailContent"></div>
+</div>
 
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js";
 import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-auth.js";
-import { getFirestore, collection, addDoc, onSnapshot, updateDoc, doc, query, orderBy, serverTimestamp, deleteDoc } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-firestore.js";
-import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-storage.js";
+import { getFirestore, collection, addDoc, onSnapshot, query, orderBy } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-firestore.js";
 
 const firebaseConfig={apiKey:"AIzaSyD3OBIuIqu5C9zCO_CexO4wIVLjX1Hf3vU",authDomain:"mj-shop-2d1e0.firebaseapp.com",projectId:"mj-shop-2d1e0",storageBucket:"mj-shop-2d1e0.appspot.com",messagingSenderId:"592598529202",appId:"1:592598529202:web:98f1777ca3cda7e69a45ab"};
-const app=initializeApp(firebaseConfig);
-const auth=getAuth(app);
-const db=getFirestore(app);
-const storage=getStorage(app);
+const app=initializeApp(firebaseConfig), auth=getAuth(app), db=getFirestore(app);
 
 let isAdmin=false, cart=[], produkCache=[], artikelCache=[], testimoniCache=[];
 const loginBox=document.getElementById("loginBox"), adminBox=document.getElementById("adminBox");
-const popup=document.getElementById("popup"), popupContent=document.getElementById("popupContent");
-const MAX_SIZE = 10 * 1024 * 1024; // 10MB
+const detailPage=document.getElementById("detailPage"), detailContent=document.getElementById("detailContent");
 
-window.showPage=id=>{document.querySelectorAll("section").forEach(s=>s.classList.remove("active"));document.getElementById(id).classList.add("active");};
+// ===== MENU CLICKABLE =====
+document.querySelectorAll('nav a').forEach(a=>{
+  a.addEventListener('click', e=>{
+    e.preventDefault();
+    const page = a.dataset.page;
+    document.querySelectorAll('section').forEach(s=>s.classList.remove('active'));
+    document.getElementById(page).classList.add('active');
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+});
 
-// LOGIN / LOGOUT
+// ===== ADMIN =====
 window.loginAdmin=()=>signInWithEmailAndPassword(auth,adminEmail.value,adminPassword.value).catch(e=>alert(e.message));
 window.logoutAdmin=()=>signOut(auth).catch(e=>alert(e.message));
-
 onAuthStateChanged(auth,user=>{
-  if(user){loginBox.style.display="none"; adminBox.style.display="block"; isAdmin=true;}
-  else{loginBox.style.display="block"; adminBox.style.display="none"; isAdmin=false;}
+  if(user){loginBox.style.display="none";adminBox.style.display="block";isAdmin=true;}
+  else{loginBox.style.display="block";adminBox.style.display="none";isAdmin=false;}
 });
 
-// ================= ADMIN TAMBAH =================
+// ===== CRUD PRODUK =====
 window.tambahProduk=async()=>{
-  const nama=pnama.value.trim(), kategori=pkategori.value, stok=parseInt(pstok.value)||0;
-  const file=pfile.files[0];
-  if(!nama || !file) return alert("Isi nama & pilih gambar");
-  if(!file.type.startsWith("image/")) return alert("Hanya file gambar yang diperbolehkan");
-  if(file.size>MAX_SIZE) return alert("Ukuran gambar maksimal 10MB");
-  const uniqName=Date.now()+"-"+file.name;
-  const storageRef=ref(storage,"produk/"+uniqName);
-  await uploadBytes(storageRef,file);
-  const gambar=await getDownloadURL(storageRef);
-  await addDoc(collection(db,"produk"),{nama,kategori,stok,gambar,created:Date.now()});
-  pnama.value=""; pstok.value=""; pfile.value="";
+  const nama=pnama.value.trim(), harga=parseInt(pharga.value), stok=parseInt(pstok.value)||0, kategori=pkategori.value, gambar=pgambar.value.trim();
+  if(!nama||!harga||!gambar)return alert("Isi nama, harga, gambar");
+  await addDoc(collection(db,"produk"),{nama,harga,stok,kategori,gambar,created:Date.now()});
+  pnama.value='';pharga.value='';pstok.value='';pgambar.value='';
 };
 
+// ===== CRUD ARTIKEL =====
 window.tambahArtikel=async()=>{
-  const judul=anama.value.trim(), isi=aisi.value.trim();
-  const file=afile.files[0];
-  if(!judul || !isi) return alert("Isi judul & isi artikel");
-  let gambar="";
-  if(file){
-    if(!file.type.startsWith("image/")) return alert("Hanya file gambar yang diperbolehkan");
-    if(file.size>MAX_SIZE) return alert("Ukuran gambar maksimal 10MB");
-    const uniqName=Date.now()+"-"+file.name;
-    const storageRef=ref(storage,"artikel/"+uniqName);
-    await uploadBytes(storageRef,file);
-    gambar=await getDownloadURL(storageRef);
-  }
+  const judul=anama.value.trim(), isi=aisi.value.trim(), gambar=agambar.value.trim();
+  if(!judul||!isi)return alert("Isi judul & isi");
   await addDoc(collection(db,"artikel"),{judul,isi,gambar,created:Date.now()});
-  anama.value=""; aisi.value=""; afile.value="";
+  anama.value='';aisi.value='';agambar.value='';
 };
 
+// ===== CRUD TESTIMONI =====
 window.tambahTestimoni=async()=>{
-  const nama=tnama.value.trim(), isi=tisi.value.trim();
-  const file=tfile.files[0];
-  if(!nama || !isi) return alert("Isi nama & isi testimoni");
-  let gambar="";
-  if(file){
-    if(!file.type.startsWith("image/")) return alert("Hanya file gambar yang diperbolehkan");
-    if(file.size>MAX_SIZE) return alert("Ukuran gambar maksimal 10MB");
-    const uniqName=Date.now()+"-"+file.name;
-    const storageRef=ref(storage,"testimoni/"+uniqName);
-    await uploadBytes(storageRef,file);
-    gambar=await getDownloadURL(storageRef);
-  }
+  const nama=tnama.value.trim(), isi=tisi.value.trim(), gambar=tgambar.value.trim();
+  if(!nama||!isi)return alert("Isi nama & isi");
   await addDoc(collection(db,"testimoni"),{nama,isi,gambar,created:Date.now()});
-  tnama.value=""; tisi.value=""; tfile.value="";
+  tnama.value='';tisi.value='';tgambar.value='';
 };
 
-// ================= RENDER =================
-const renderSlider = (items, el)=>{
-  el.innerHTML="";
-  items.forEach(data=>{
-    const card=document.createElement("div");
-    card.className="card";
-    card.innerHTML=`${data.gambar?`<img src="${data.gambar}">`:""}<b>${data.nama||data.judul||data.nama}</b><p>${data.isi||''}</p>${data.stok!=undefined?'<br>Stok:'+data.stok:''}${data.qty?`<br>Qty:${data.qty}`:''}${isAdmin&&data.id?`<br><button class="btn btn-danger" onclick="hapusData('${data.id}','${el.id}')">Hapus</button>`:""}<br>${data.stok!=undefined?`<button class="btn" onclick="addCart('${data.id}')">Tambah Keranjang</button>`:""}`;
-    
-    card.querySelectorAll("button").forEach(btn=>btn.addEventListener("click",e=>e.stopPropagation()));
-    card.addEventListener("click",()=>showPopupDetail(data));
+// ===== RENDER DATA =====
+const renderData=(col,cache,elId)=>{
+  const el=document.getElementById(elId); el.innerHTML="";
+  cache.forEach(d=>{
+    const card=document.createElement("div"); card.className="card";
+    let textPreview=d.isi?d.isi.substring(0,100)+"...": "";
+    card.innerHTML=`${d.gambar?`<img src="${d.gambar}">`:""}<div><b>${d.nama||d.judul}</b>${d.harga!==undefined?`<p>Rp ${d.harga.toLocaleString()}</p>`:""}<p>${textPreview}</p></div>`;
     el.appendChild(card);
+    card.addEventListener("click",()=>showDetail(d));
   });
 };
 
-// ================= POPUP =================
-const showPopupDetail=data=>{
-  popupContent.innerHTML="";
-  if(data.gambar) popupContent.innerHTML+=`<img src="${data.gambar}" style="width:100%;border-radius:6px;margin-bottom:6px;">`;
-  if(data.nama) popupContent.innerHTML+=`<b>${data.nama}</b><p>Stok:${data.stok||"-"}</p>`;
-  if(data.judul) popupContent.innerHTML+=`<b>${data.judul}</b><p>${data.isi}</p>`;
-  popup.style.display="flex";
-};
+// ===== SNAPSHOT REALTIME =====
+onSnapshot(query(collection(db,"produk"),orderBy("created","desc")),(snap)=>{produkCache=snap.docs.map(d=>({id:d.id,...d.data()})); renderData("produk",produkCache,"homeProduk"); renderData("produk",produkCache,"produkList");});
+onSnapshot(query(collection(db,"artikel"),orderBy("created","desc")),(snap)=>{artikelCache=snap.docs.map(d=>({id:d.id,...d.data()})); renderData("artikel",artikelCache,"homeArtikel"); renderData("artikel",artikelCache,"artikelList");});
+onSnapshot(query(collection(db,"testimoni"),orderBy("created","desc")),(snap)=>{testimoniCache=snap.docs.map(d=>({id:d.id,...d.data()})); renderData("testimoni",testimoniCache,"homeTestimoni"); renderData("testimoni",testimoniCache,"testimoniList");});
 
-// ================= HAPUS DATA =================
-window.hapusData=async(id,elId)=>{
-  if(confirm("Yakin mau hapus?")){
-    const col = elId.includes("Produk")||elId==="produkList"?"produk":elId.includes("Artikel")||elId==="artikelList"?"artikel":"testimoni";
-    await deleteDoc(doc(db,col,id));
-  }
-};
+// ===== DETAIL PAGE =====
+function showDetail(d){
+  detailContent.innerHTML=`${d.gambar?`<img src="${d.gambar}">`:""}<b>${d.nama||d.judul}</b><p>${d.harga!==undefined?`Rp ${d.harga.toLocaleString()}`:""}</p><p>${d.stok!==undefined?`Stok: ${d.stok}`:""}</p>${d.isi?`<p>${d.isi}</p>`:""}${d.harga?`<button class="btn" onclick="addToCart('${d.id}')">Beli Produk</button>`:""}`;
+  detailPage.classList.add("active");
+}
+document.querySelector(".close-detail").addEventListener("click", ()=> detailPage.classList.remove("active"));
 
-// ================= KERANJANG =================
-window.addCart=id=>{
-  const prod=produkCache.find(p=>p.id===id); 
-  if(!prod) return; 
-  let found=cart.find(c=>c.id===id); 
-  if(found) found.qty++; 
-  else cart.push({...prod,qty:1}); 
-  updateCart();
-};
+// ===== KERANJANG =====
+if(localStorage.getItem("cart")) cart=JSON.parse(localStorage.getItem("cart"));
 const updateCart=()=>{
-  const cl=document.getElementById("cartList"); 
-  if(cart.length===0){cl.innerHTML="Belum ada produk di keranjang"; return;} 
-  cl.innerHTML=""; 
-  cart.forEach(p=>{
-    const div=document.createElement("div"); 
-    div.className="card"; 
-    div.innerHTML=`<b>${p.nama}</b> (x${p.qty})`; 
-    cl.appendChild(div);
-  });
+  const cl=document.getElementById("cartList");
+  const totalEl=document.getElementById("totalHarga");
+  if(cart.length===0){cl.innerHTML="Belum ada produk di keranjang"; totalEl.textContent="0"; return;}
+  cl.innerHTML=""; let total=0;
+  cart.forEach(p=>{total+=(p.harga*p.qty||0); const div=document.createElement("div"); div.className="card"; div.innerHTML=`<b>${p.nama}</b> (x${p.qty}) - Rp ${(p.harga*p.qty).toLocaleString()}`; cl.appendChild(div);});
+  totalEl.textContent=total.toLocaleString();
 };
-window.checkout=async()=>{
-  if(cart.length===0) return alert("Keranjang kosong");
-let msg="Order Produk:\n";
-// cek stok
-for(const p of cart){
-  const prodRef=produkCache.find(pr=>pr.id===p.id); 
-  if(prodRef && prodRef.stok<p.qty){alert(`Stok ${p.nama} kurang!`); return;}
-}
-// kurangi stok & simpan transaksi
-for(const p of cart){
-  msg+=`${p.nama} x${p.qty}\n`; 
-  const prodRef=produkCache.find(pr=>pr.id===p.id); 
-  if(prodRef) await updateDoc(doc(db,"produk",p.id),{stok:prodRef.stok-p.qty}); 
-  await addDoc(collection(db,"transaksi"),{produk:p.nama,qty:p.qty,tanggal:serverTimestamp()});
-}
-cart=[]; 
-updateCart(); 
-window.open(`https://wa.me/6285691451094?text=${encodeURIComponent(msg)}`);
+window.addToCart=(id)=>{
+  const prod=produkCache.find(p=>p.id===id); if(!prod)return alert("Produk tidak ditemukan");
+  const exist=cart.find(c=>c.id===id); if(exist){exist.qty++;} else{cart.push({id:prod.id,nama:prod.nama,harga:prod.harga,qty:1});}
+  localStorage.setItem("cart",JSON.stringify(cart)); updateCart(); alert("Produk ditambahkan ke keranjang"); detailPage.classList.remove("active");
 };
-
-// ================= FILTER =================
-const filterProduk=()=>{
-  const val=document.getElementById("filterKategori").value;
-  let items=produkCache;
-  if(val!=="all") items=produkCache.filter(p=>p.kategori===val);
-  renderSlider(items, document.getElementById("produkList"));
-};
-
-// ================= SNAPSHOT REALTIME =================
-onSnapshot(query(collection(db,"produk"),orderBy("created","desc")),(snap)=>{
-  produkCache=snap.docs.map(d=>({id:d.id,...d.data()}));
-  renderSlider(produkCache,document.getElementById("homeProduk"));
-  renderSlider(produkCache,document.getElementById("produkList"));
-});
-onSnapshot(query(collection(db,"artikel"),orderBy("created","desc")),(snap)=>{
-  artikelCache=snap.docs.map(d=>({id:d.id,...d.data()}));
-  renderSlider(artikelCache,document.getElementById("homeArtikel"));
-  renderSlider(artikelCache,document.getElementById("artikelList"));
-});
-onSnapshot(query(collection(db,"testimoni"),orderBy("created","desc")),(snap)=>{
-  testimoniCache=snap.docs.map(d=>({id:d.id,...d.data()}));
-  renderSlider(testimoniCache,document.getElementById("homeTestimoni"));
-  renderSlider(testimoniCache,document.getElementById("testimoniList"));
-});
-
-// ================= SLIDER SCROLL & ESC =================
-document.querySelectorAll('.slider').forEach(sl=>{
-  sl.addEventListener('wheel',e=>{
-    e.preventDefault();
-    sl.scrollLeft += e.deltaY;
-  });
-});
-document.addEventListener('keydown', e => {
-  if (e.key === "Escape") popup.style.display = "none";
-});
+window.checkout=()=>{if(cart.length===0)return alert("Keranjang kosong"); const wa="6285691451094"; let msg="Halo, saya ingin order:\n"; cart.forEach(p=>{msg+=`- ${p.nama} x${p.qty}\n`;}); window.open(`https://wa.me/${wa}?text=${encodeURIComponent(msg)}`);}
+updateCart();
 </script>
 </body>
 </html>
